@@ -5,12 +5,16 @@ import { exerciseOptions, fetchData } from "../utils/funcs";
 import HorizontalScrollbar from "./HorizontalScrollbar";
 
 interface SearchExercisesProps {
-  setExercises : Dispatch<SetStateAction<ExerciseType[]>> ,
-  bodyPart : string , 
-  setBodyPart : Dispatch<SetStateAction<string>>
+  setExercises: Dispatch<SetStateAction<ExerciseType[]>>;
+  bodyPart: string;
+  setBodyPart: Dispatch<SetStateAction<string>>;
 }
 
-const SearchExercises = ({setExercises , bodyPart , setBodyPart} : SearchExercisesProps) => {
+const SearchExercises = ({
+  setExercises,
+  bodyPart,
+  setBodyPart,
+}: SearchExercisesProps) => {
   const [search, setSearch] = useState("");
   const [bodyParts, setBodyParts] = useState<string[]>([]);
 
@@ -35,8 +39,6 @@ const SearchExercises = ({setExercises , bodyPart , setBodyPart} : SearchExercis
         "https://exercisedb.p.rapidapi.com/exercises",
         exerciseOptions
       );
-
-      console.log(exerciseData);
 
       const searchedExercise = exerciseData.filter(
         (exercise: ExerciseType) =>
