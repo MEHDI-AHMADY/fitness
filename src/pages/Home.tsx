@@ -15,17 +15,24 @@ export interface ExerciseType {
 }
 
 const Home = () => {
-  const [bodyPart , setBodyPart] = useState<string>("all")
-  const [exercises , setExercises] = useState<ExerciseType[]>([]);
+  const [bodyPart, setBodyPart] = useState<string>("all");
+  const [exercises, setExercises] = useState<ExerciseType[]>([]);
 
   return (
     <Box>
       <HeroBanner />
-      <SearchExercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart}/>
-      <Exercises />
+      <SearchExercises
+        setExercises={setExercises}
+        bodyPart={bodyPart}
+        setBodyPart={setBodyPart}
+      />
+      <Exercises
+        exercises={exercises}
+        bodyPart={bodyPart}
+        setExercises={setExercises}
+        />
     </Box>
   );
 };
 
 export default Home;
-

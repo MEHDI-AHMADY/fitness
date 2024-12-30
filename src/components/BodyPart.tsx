@@ -20,7 +20,7 @@ const BodyPart = ({ item, bodyPart, setBodyPart }: BodyPartProps) => {
         window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
       }}
     >
-      <img src={Icon} alt="dumbbell" className="w-10 h-10" />
+    <img src={Icon} alt="dumbbell" className="w-10 h-10" />
       <Typography className="text-2xl text-[#3A1212] capitalize">
         {item}
       </Typography>

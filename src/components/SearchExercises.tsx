@@ -25,8 +25,6 @@ const SearchExercises = ({
         exerciseOptions
       );
 
-      console.log(bodyPartsData);
-
       setBodyParts(["all", ...bodyPartsData]);
     };
 

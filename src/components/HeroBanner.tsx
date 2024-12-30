@@ -21,7 +21,7 @@ const HeroBanner = () => {
       <img
         src={HeroBannerImage}
         alt="banner"
-        className="absolute right-10 top-0 w-[700px] h-[800px] mt-[-320px]"
+        className="hidden lg:block absolute right-10 top-0 w-[700px] h-[800px] mt-[-320px]"
       />
     </Box>
   );
