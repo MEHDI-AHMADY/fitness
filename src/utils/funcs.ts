@@ -1,4 +1,4 @@
-export const exerciseOptions :RequestInit = {
+export const exerciseOptions: RequestInit = {
   method: "GET",
   headers: {
     "x-rapidapi-key": import.meta.env.VITE_RAPID_API_KEY,
@@ -6,8 +6,12 @@ export const exerciseOptions :RequestInit = {
   },
 };
 
-export const fetchData = async (url: string, options :RequestInit) => {
-  const res = await fetch(url, options);
-  const exercises = await res.json();
-  return exercises;
+export const fetchData = async (url: string, options: RequestInit) => {
+ try {
+    const res = await fetch(url, options);
+    const exercises = await res.json();
+    return exercises;
+ } catch (error : any) {
+  throw new Error(error)
+ }
 };
